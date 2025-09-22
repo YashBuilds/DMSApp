@@ -1,97 +1,113 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📂 Document Management System (DMS)
 
-# Getting Started
+A modern and responsive **Document Management System** built with **React + TypeScript**.
+The application provides **secure OTP-based authentication**, **document uploads**, **advanced search**, and a clean **dashboard** UI integrated with provided API endpoints.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 🔐 Authentication
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+* OTP-based login with **mobile number verification**
+* **/generateOTP** and **/validateOTP** API integration
 
-```sh
-# Using npm
-npm start
+### 📤 Document Upload
 
-# OR using Yarn
-yarn start
+* **Drag & Drop** file upload
+* Add **metadata**: major/minor heads, tags, remarks, and date
+* API: **/saveDocumentEntry**
+
+### 🔍 Advanced Search
+
+* Search documents by:
+
+  * Tags
+  * Dates
+  * User
+  * Text keywords
+* API: **/searchDocumentEntry**
+
+### 📊 Dashboard
+
+* Overview of document statistics
+* List of recent documents
+
+### 🏷️ Tag Management
+
+* Add / remove tags for better categorization
+* API: **/documentTags**
+
+---
+
+## 🎨 UI/UX Highlights
+
+* **Clean & Modern Interface** (blue-gray theme with subtle shadows)
+* **Responsive Layout** (mobile, tablet, and desktop)
+* **Interactive Components** (hover effects, smooth transitions)
+* **User Feedback** (success/error messages, loaders)
+* **Accessible Design** (proper contrast, keyboard navigation support)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── App.tsx
+ ├── components/
+ │    ├── AuthScreen.tsx
+ │    ├── Dashboard.tsx
+ │    ├── UploadDocument.tsx
+ │    ├── SearchDocuments.tsx
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## ⚙️ Installation & Setup
 
-### Android
+1. **Clone the repository**
 
-```sh
-# Using npm
-npm run android
+   ```bash
+   git clone <repo-url>
+   cd document-management-system
+   ```
 
-# OR using Yarn
-yarn android
-```
+2. **Install dependencies**
 
-### iOS
+   ```bash
+   npm install
+   ```
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+3. **Start development server**
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+   ```bash
+   npm run dev
+   ```
 
-```sh
-bundle install
-```
+4. The app will run at: [http://localhost:5173](http://localhost:5173) (default for Vite).
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
+## 🔌 API Endpoints Used
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+* `POST /generateOTP` – Generate OTP for login
+* `POST /validateOTP` – Validate OTP for authentication
+* `POST /saveDocumentEntry` – Upload document with metadata
+* `POST /searchDocumentEntry` – Search documents
+* `GET /documentTags` – Manage document tags
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
+## 🛠️ Tech Stack
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+* **Frontend**: React, TypeScript, Vite
+* **Styling**: Tailwind CSS (or CSS-in-JS depending on your setup)
+* **State Management**: React Hooks
+* **Backend APIs**: Integrated via provided endpoints
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## 📜 License
 
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the **MIT License**.
