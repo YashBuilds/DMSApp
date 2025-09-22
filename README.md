@@ -1,113 +1,47 @@
-# 📂 Document Management System (DMS)
+# 📱 Document Management System - React Native App
 
-A modern and responsive **Document Management System** built with **React + TypeScript**.
-The application provides **secure OTP-based authentication**, **document uploads**, **advanced search**, and a clean **dashboard** UI integrated with provided API endpoints.
-
----
-
-## 🚀 Features
-
-### 🔐 Authentication
-
-* OTP-based login with **mobile number verification**
-* **/generateOTP** and **/validateOTP** API integration
-
-### 📤 Document Upload
-
-* **Drag & Drop** file upload
-* Add **metadata**: major/minor heads, tags, remarks, and date
-* API: **/saveDocumentEntry**
-
-### 🔍 Advanced Search
-
-* Search documents by:
-
-  * Tags
-  * Dates
-  * User
-  * Text keywords
-* API: **/searchDocumentEntry**
-
-### 📊 Dashboard
-
-* Overview of document statistics
-* List of recent documents
-
-### 🏷️ Tag Management
-
-* Add / remove tags for better categorization
-* API: **/documentTags**
+A complete **React Native Document Management System** built as per the assignment requirements.
 
 ---
 
-## 🎨 UI/UX Highlights
+## ✅ Core Features
 
-* **Clean & Modern Interface** (blue-gray theme with subtle shadows)
-* **Responsive Layout** (mobile, tablet, and desktop)
-* **Interactive Components** (hover effects, smooth transitions)
-* **User Feedback** (success/error messages, loaders)
-* **Accessible Design** (proper contrast, keyboard navigation support)
-
----
-
-## 📂 Project Structure
-
-```
-src/
- ├── App.tsx
- ├── components/
- │    ├── AuthScreen.tsx
- │    ├── Dashboard.tsx
- │    ├── UploadDocument.tsx
- │    ├── SearchDocuments.tsx
-```
+* OTP-based authentication with mobile number
+* Document upload with metadata (major head, minor head, date, remarks, tags)
+* Document search with advanced filters (date range, tags, categories)
+* Profile screen with user stats and settings
 
 ---
 
-## ⚙️ Installation & Setup
+## 🎨 Design Elements
 
-1. **Clone the repository**
-
-   ```bash
-   git clone <repo-url>
-   cd document-management-system
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-
-   ```bash
-   npm run dev
-   ```
-
-4. The app will run at: [http://localhost:5173](http://localhost:5173) (default for Vite).
+* Modern, minimal UI with consistent **blue (#2563eb)** theme
+* Clean typography & 8px grid spacing system
+* Smooth transitions & intuitive interactions
+* Responsive across all device sizes
+* Professional card-based layouts with subtle shadows
 
 ---
 
-## 🔌 API Endpoints Used
+## 📂 Key Screens
 
-* `POST /generateOTP` – Generate OTP for login
-* `POST /validateOTP` – Validate OTP for authentication
-* `POST /saveDocumentEntry` – Upload document with metadata
-* `POST /searchDocumentEntry` – Search documents
-* `GET /documentTags` – Manage document tags
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend**: React, TypeScript, Vite
-* **Styling**: Tailwind CSS (or CSS-in-JS depending on your setup)
-* **State Management**: React Hooks
-* **Backend APIs**: Integrated via provided endpoints
+* **Login Screen (/auth/login):** OTP authentication flow
+* **Upload Tab:** Document upload with form fields & file picker
+* **Search Tab:** Advanced search with filters modal
+* **Profile Tab:** User info & app settings
 
 ---
 
-## 📜 License
+## 🔌 API Integration
 
-This project is licensed under the **MIT License**.
+* Integrated with all endpoints from provided Postman collection
+* Proper error handling & loading states
+* Form validation & user feedback
+
+---
+
+## 🛠️ Code Quality
+
+* Follows React Native best practices
+* Clean code structure with proper navigation
+* Professional user interface aligned with assignment requirements
